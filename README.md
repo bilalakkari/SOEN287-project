@@ -64,7 +64,7 @@ https://bc-b1a7e3f4df9c.hosted.ghaymah.systems
 #### Steps
 1. Download or clone this repository:
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/bilalakkari/SOEN287-project
    ```
 2. Open the folder in VS Code:
    ```bash

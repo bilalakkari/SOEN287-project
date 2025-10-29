@@ -1,0 +1,129 @@
+:root {
+  /* Concordia palette */
+  --burgundy: #912338;
+  --gold: #da3a16;
+  --dark: #1b1f2a;
+  --light: #ffffff;
+  --muted: #f5f5f7;
+  --overlay: rgba(10, 12, 16, .55);
+
+  --radius: 14px;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  --font: 'Inter', system-ui, Arial, sans-serif;
+
+  /* Background image from Concordia */
+  --bg-image: url("https://www.concordia.ca/content/concordia/en/about/history/_jcr_content/content-main/grid_container_45178103/grid-container-parsys/card_deck/card-deck-parsys/card_1108083642/adaptiveimage.img.620.medium.jpg/1712176459788.jpg");
+}
+
+/* === PAGE LAYOUT === */
+main {
+  font-family: var(--font);
+  background:
+    linear-gradient(var(--overlay), var(--overlay)),
+    var(--bg-image) center/cover fixed no-repeat;
+  color: var(--dark);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 16px;
+}
+
+h1 {
+  color: var(--burgundy);
+  background: rgba(255, 255, 255, 0.92);
+  padding: 14px 22px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  font-weight: 700;
+  margin-bottom: 28px;
+  letter-spacing: .5px;
+}
+
+/* === REQUEST LIST === */
+.requests {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: min(720px, 95%);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.request {
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px 22px;
+  line-height: 1.6;
+  font-size: 1rem;
+  border-left: 6px solid var(--burgundy);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.request strong {
+  color: var(--burgundy);
+}
+
+.request:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, .18);
+}
+
+/* === BUTTONS === */
+.actions {
+  display: block;
+  margin-top: 12px;
+}
+
+.actions button {
+  font-family: var(--font);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background .25s ease, transform .1s ease;
+}
+
+/* Approve button */
+.actions .approve {
+  background: var(--gold);
+  color: #fff;
+}
+
+.actions .approve:hover {
+  background: #b52f12;
+  transform: translateY(-2px);
+}
+
+/* Deny button */
+.actions .deny {
+  background: #d32f2f;
+  color: #fff;
+}
+
+.actions .deny:hover {
+  background: #a32020;
+  transform: translateY(-2px);
+}
+
+/* === BACK BUTTON === */
+.back {
+  margin-top: 30px;
+}
+
+.back button {
+  background: var(--burgundy);
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: background .25s ease, transform .1s ease;
+}

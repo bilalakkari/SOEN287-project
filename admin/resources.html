@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Resources</title>
+    <link rel="stylesheet" href="../css/dashboard/resources.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <style>
+        /* Custom Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table th,
+        table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        /* Button styling */
+        .btn-add-resource {
+            margin-bottom: 20px;
+        }
+
+        /* Responsive Table */
+        @media (max-width: 768px) {
+
+            table th,
+            table td {
+                font-size: 12px;
+                padding: 8px;
+            }
+
+            table {
+                font-size: 12px;
+            }
+        }
+
+        /* Card Container */
+        .container {
+            padding: 20px;
+        }
+
+        .navbar {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../admin/dashboard.html">My Dashboard</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="profile.html">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="resources.html">Resources</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="request.html" class="nav-link">Requests</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="statistics.html" class="nav-link">Reports</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+        <h2>Rooms and Spaces</h2>
+
+        <!-- Add Resource Button -->
+        <a href="add-resource.html" class="btn btn-primary btn-add-resource">Add New Resource</a>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Resource Name</th>
+                    <th>Type</th>
+                    <th>Capacity</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Resource Name">Study Room</td>
+                    <td data-label="Type">Room</td>
+                    <td data-label="Capacity">4 people</td>
+                    <td data-label="Location">Library, 2nd Floor</td>
+                </tr>
+                <tr>
+                    <td data-label="Resource Name">Computer Lab</td>
+                    <td data-label="Type">Lab</td>
+                    <td data-label="Capacity">25 computers</td>
+                    <td data-label="Location">EV-5.123</td>
+                </tr>
+                <tr>
+                    <td data-label="Resource Name">Conference Room</td>
+                    <td data-label="Type">Room</td>
+                    <td data-label="Capacity">12 people</td>
+                    <td data-label="Location">H-9.210</td>
+                </tr>
+                <tr>
+                    <td data-label="Resource Name">Lecture Hall</td>
+                    <td data-label="Type">Hall</td>
+                    <td data-label="Capacity">100 seats</td>
+                    <td data-label="Location">MB-1.135</td>
+                </tr>
+                <tr>
+                    <td data-label="Resource Name">Makerspace Room</td>
+                    <td data-label="Type">Workshop</td>
+                    <td data-label="Capacity">10 people</td>
+                    <td data-label="Location">EV-7.421</td>
+                </tr>
+                <tr>
+                    <td data-label="Resource Name">Music Practice Room</td>
+                    <td data-label="Type">Studio</td>
+                    <td data-label="Capacity">2 people</td>
+                    <td data-label="Location">FG-3.101</td>
+                </tr>
+                <tr>
+                    <td data-label="Resource Name">Art Studio</td>
+                    <td data-label="Type">Studio</td>
+                    <td data-label="Capacity">8 people</td>
+                    <td data-label="Location">VA-2.230</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

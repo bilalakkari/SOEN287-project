@@ -1,0 +1,139 @@
+:root {
+  /* Concordia official color palette */
+  --burgundy: #912338;
+  /* primary */
+  --gold: #da3a16;
+  /* accent */
+  --gray-dark: #1b1f2a;
+  --white: #ffffff;
+  --text-dark: #3c1616;
+
+  /* Background image (Concordia building) */
+  --bg-image: url("https://www.concordia.ca/content/concordia/en/about/history/_jcr_content/content-main/grid_container_45178103/grid-container-parsys/card_deck/card-deck-parsys/card_1108083642/adaptiveimage.img.620.medium.jpg/1712176459788.jpg");
+
+  --overlay: rgba(10, 12, 16, .55);
+  --radius: 16px;
+  --shadow: 0 10px 30px rgba(0, 0, 0, .25);
+  --font: 'Inter', system-ui, Arial, sans-serif;
+}
+
+/* Body background */
+main {
+  background:
+    linear-gradient(var(--overlay), var(--overlay)),
+    var(--bg-image) center/cover fixed no-repeat;
+  font-family: var(--font);
+  color: var(--text-dark);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Center card */
+.form-card {
+  width: min(500px, 90vw);
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: var(--radius);
+  padding: 30px 26px 22px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(8px);
+  border-top: 6px solid var(--burgundy);
+  text-align: left;
+}
+
+/* Header */
+.form-card h2 {
+  margin-top: 0;
+  color: var(--burgundy);
+  font-weight: 700;
+}
+
+.form-card .sub {
+  color: color-mix(in oklab, var(--text-dark), #000 30%);
+  margin-bottom: 18px;
+}
+
+/* Fields */
+.field {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.field span {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.field input {
+  height: 44px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(145, 35, 56, 0.25);
+  background: #fff;
+  color: var(--text-dark);
+  font-family: var(--font);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field input:focus {
+  border-color: var(--burgundy);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--burgundy), transparent 80%);
+  outline: none;
+}
+
+/* Radio buttons */
+.radio-set {
+  border: none;
+  margin: 14px 0;
+}
+
+.radio-set legend {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-dark);
+}
+
+.radio-set label {
+  margin-right: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.radio-set input[type="radio"] {
+  accent-color: var(--burgundy);
+  width: 18px;
+  height: 18px;
+}
+
+/* Button */
+.actions {
+  text-align: right;
+  margin-top: 18px;
+}
+
+.btn-primary {
+  background: var(--gold);
+  border: none;
+  color: var(--white);
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.1s ease;
+}
+
+.btn-primary:hover {
+  background: #b52f12;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .form-card {
+    padding: 20px 16px;
+  }
+}

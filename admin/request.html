@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Requests</title>
+  <link rel="stylesheet" href="../css/dashboard/request.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+  <div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../admin/dashboard.html">My Dashboard</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="profile.html">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="resources.html">Resources</a>
+            </li>
+            <li class="nav-item">
+              <a href="request.html" class="nav-link">Requests</a>
+            </li>
+            <li class="nav-item">
+              <a href="statistics.html" class="nav-link">Reports</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <main>
+    <h1>Pending Book Requests</h1>
+    <ul class="requests">
+      <li class="request">
+        Student = <strong>John Doe</strong>
+        Request = <strong>5:00 pm - 6:00 pm 2025-10-22</strong>
+        Reason = I want to meet with my team for my Soen287 project
+        <span class="actions">
+          <button class="approve" data-student="John Doe">Approve</button>
+          <button class="deny" data-student="John Doe">Deny</button>
+        </span>
+      </li>
+
+      <li class="request">
+        Student = <strong>Alice Nguyen</strong>
+        Request = <strong>9:30 am - 10:30 am 2025-10-23</strong>
+        Reason = Need help reviewing my COMP248 assignment
+        <span class="actions">
+          <button class="approve" data-student="Alice Nguyen">Approve</button>
+          <button class="deny" data-student="Alice Nguyen">Deny</button>
+        </span>
+      </li>
+
+      <li class="request">
+        Student = <strong>Mark Thompson</strong>
+        Request = <strong>2:00 pm - 3:00 pm 2025-10-25</strong>
+        Reason = Discuss upcoming midterm project proposal
+        <span class="actions">
+          <button class="approve" data-student="Mark Thompson">Approve</button>
+          <button class="deny" data-student="Mark Thompson">Deny</button>
+        </span>
+      </li>
+
+      <li class="request">
+        Student = <strong>Sophia Martinez</strong>
+        Request = <strong>11:15 am - 12:00 pm 2025-10-26</strong>
+        Reason = Clarify doubts about JavaScript DOM manipulation
+        <span class="actions">
+          <button class="approve" data-student="Sophia Martinez">Approve</button>
+          <button class="deny" data-student="Sophia Martinez">Deny</button>
+        </span>
+      </li>
+
+      <li class="request">
+        Student = <strong>Liam Patel</strong>
+        Request = <strong>4:45 pm - 5:30 pm 2025-10-29</strong>
+        Reason = Schedule feedback session for my co-op resume
+        <span class="actions">
+          <button class="approve" data-student="Liam Patel">Approve</button>
+          <button class="deny" data-student="Liam Patel">Deny</button>
+        </span>
+      </li>
+    </ul>
+
+    <p class="back">
+      <a href="../admin/dashboard.html"><button>Go Back To Dashboard</button></a>
+    </p>
+  </main>
+</body>
+
+</html>

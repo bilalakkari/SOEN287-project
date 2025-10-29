@@ -1,0 +1,132 @@
+:root {
+  /* Background image */
+  --bg-image: url("https://www.concordia.ca/content/concordia/en/about/history/_jcr_content/content-main/grid_container_45178103/grid-container-parsys/card_deck/card-deck-parsys/card_1108083642/adaptiveimage.img.620.medium.jpg/1712176459788.jpg");
+
+  /* Concordia-style palette */
+  --primary: #912338;
+  /* Burgundy */
+  --accent: #da3a16;
+  /* Orange accent */
+  --muted: #1b1f2a;
+  /* Deep neutral for surfaces */
+  --text: #ffffff;
+  /* Light text */
+  --text-d: #1c1c20;
+  /* Dark text */
+
+  --overlay: rgba(10, 12, 16, .55);
+  /* Overlay for readability */
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(0, 0, 0, .25);
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--text);
+  background:
+    linear-gradient(var(--overlay), var(--overlay)),
+    var(--bg-image) center/cover fixed no-repeat;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: 'Inter', system-ui, Arial, sans-serif;
+}
+
+/* Navbar (fix for light Bootstrap default) */
+.bg-body-tertiary {
+  background: rgba(20, 20, 30, 0.85) !important;
+  /* dark transparent navbar */
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, .12);
+}
+
+.navbar-brand {
+  color: #3c1616 !important;
+  font-weight: 700;
+  letter-spacing: .3px;
+}
+
+.navbar .nav-link {
+  color: #3c1616 !important;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #3c1616 !important;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, .35) !important;
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #111;
+  font-weight: 600;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: all 0.25s ease;
+}
+
+.btn-primary:hover {
+  background: #b52f12;
+  border-color: #b52f12;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: #343a40;
+  border-color: #343a40;
+  border-radius: 12px;
+}
+
+/* Modal styling */
+.modal-content {
+  background: color-mix(in oklab, var(--muted), white 6%);
+  color: var(--text);
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.modal-header,
+.modal-footer {
+  border-color: rgba(255, 255, 255, .12);
+}
+
+.btn-close {
+  filter: invert(1);
+  /* make the close icon white */
+}
+
+/* Layout spacing */
+.page-wrap {
+  padding: 24px;
+}
+
+/* Optional content panel (if you add sections later) */
+.panel {
+  background: color-mix(in oklab, var(--muted), white 8%);
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+
+/* Small responsive tweak */
+@media (max-width: 768px) {
+  .navbar .nav-link {
+    color: #fff !important;
+  }
+}

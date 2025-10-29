@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>University Resources - Rooms and Spaces</title>
+  <link rel="stylesheet" href="../css/dashboard/rooms.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9fafb;
+      margin: 40px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 12px 16px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    tr:hover {
+      background-color: #e8f5e9;
+    }
+
+    @media (max-width: 600px) {
+
+      table,
+      thead,
+      tbody,
+      th,
+      td,
+      tr {
+        display: block;
+      }
+
+      th {
+        display: none;
+      }
+
+      td {
+        border: none;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+        padding-left: 50%;
+      }
+
+      td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Rooms and Spaces</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Resource Name</th>
+        <th>Type</th>
+        <th>Capacity</th>
+        <th>Location</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Resource Name">Study Room</td>
+        <td data-label="Type">Room</td>
+        <td data-label="Capacity">4 people</td>
+        <td data-label="Location">Library, 2nd Floor</td>
+      </tr>
+      <tr>
+        <td data-label="Resource Name">Computer Lab</td>
+        <td data-label="Type">Lab</td>
+        <td data-label="Capacity">25 computers</td>
+        <td data-label="Location">EV-5.123</td>
+      </tr>
+      <tr>
+        <td data-label="Resource Name">Conference Room</td>
+        <td data-label="Type">Room</td>
+        <td data-label="Capacity">12 people</td>
+        <td data-label="Location">H-9.210</td>
+      </tr>
+      <tr>
+        <td data-label="Resource Name">Lecture Hall</td>
+        <td data-label="Type">Hall</td>
+        <td data-label="Capacity">100 seats</td>
+        <td data-label="Location">MB-1.135</td>
+      </tr>
+      <tr>
+        <td data-label="Resource Name">Makerspace Room</td>
+        <td data-label="Type">Workshop</td>
+        <td data-label="Capacity">10 people</td>
+        <td data-label="Location">EV-7.421</td>
+      </tr>
+      <tr>
+        <td data-label="Resource Name">Music Practice Room</td>
+        <td data-label="Type">Studio</td>
+        <td data-label="Capacity">2 people</td>
+        <td data-label="Location">FG-3.101</td>
+      </tr>
+      <tr>
+        <td data-label="Resource Name">Art Studio</td>
+        <td data-label="Type">Studio</td>
+        <td data-label="Capacity">8 people</td>
+        <td data-label="Location">VA-2.230</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+
+</html>

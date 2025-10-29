@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Campus Resource Booking System</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <header>
+        <h1>Campus Resource Booking System</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Sign Up</a>
+        </nav>
+    </header>
+
+    <!-- AJOUT: classe hero + wrapper card pour lisibilité -->
+    <main class="hero">
+        <div class="card hero-card">
+            <h1 class="center">Welcome to the Campus Resource Booking System</h1>
+            <p class="center subt">
+                This project was developed for Concordia University's SOEN 287 course.
+            </p>
+            <p class="center subt">
+                The system allows students and faculty to reserve university resources such as study rooms, labs, and
+                sports facilities.
+                Administrators can manage resources, bookings, and monitor usage.
+            </p>
+        </div>
+
+        <div class="grid-2">
+            <section class="card">
+                <h2 class="center">Features for Students/Faculty</h2>
+                <ul class="clean-list">
+                    <li>Create and manage accounts</li>
+                    <li>Browse available resources</li>
+                    <li>Make, modify, or cancel bookings</li>
+                    <li>View upcoming and past reservations</li>
+                </ul>
+            </section>
+
+            <section class="card" style="margin-left: 10px;">
+                <h2 class="center">Features for Administrators</h2>
+                <ul class="clean-list">
+                    <li>Add, edit, and remove resources</li>
+                    <li>Approve or reject booking requests</li>
+                    <li>View usage statistics</li>
+                </ul>
+            </section>
+        </div>
+
+        <p class="center">
+            <a href="login.html" class="button">Get Started</a>
+        </p>
+
+        <footer id="site-footer">
+            <div class="footer-container">
+                <!-- Colonne gauche -->
+                <section class="footer-brand">
+                    <h2>Campus Resource Booking</h2>
+                    <p>A fictional platform demo for booking study rooms, labs, and equipment.</p>
+
+                    <p>123-456-789</p>
+                    <p>campus-booking@gmail.com</p>
+
+                    <!-- (optionnel) icônes réseaux plus tard -->
+                    <!-- <div class="socials">…</div> -->
+                </section>
+
+                <!-- Colonne droite -->
+                <section class="footer-contact">
+                    <h2>Contact Us</h2>
+                    <form action="#" method="post" id="contact-form">
+                        <label for="contact-email">Your email address</label>
+                        <input type="email" id="contact-email" name="email" placeholder="you@example.com" required>
+
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" name="message" rows="4" placeholder="Write your message..."
+                            required></textarea>
+
+                        <button type="submit">Send</button>
+                    </form>
+                </section>
+            </div>
+        </footer>
+
+    </main>
+</body>
+
+</html>

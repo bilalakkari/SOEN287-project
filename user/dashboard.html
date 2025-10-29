@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - Campus Resource Booking System</title>
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Campus Resource Booking</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="dashboard.html">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="resources.html">Resources</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="bookings.html">Bookings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="profile.html">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mt-4">
+        <div class="row">
+            <div class="col-md-4">
+                <!-- User Profile Section -->
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">User Profile</h5>
+                        <p><strong>Name:</strong> John Doe</p>
+                        <p><strong>Email:</strong> johndoe@example.com</p>
+                        <a href="profile.html" class="btn btn-primary">Edit Profile</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <!-- Upcoming Booking Section -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Your Next Booking</h5>
+                        <p><strong>Resource:</strong> Study Room A</p>
+                        <p><strong>Date & Time:</strong> 2025-11-01 at 10:00 AM</p>
+                        <p><strong>Purpose:</strong> Group Study Session</p>
+                        <a href="bookings.html" class="btn btn-warning">Manage Bookings</a>
+                    </div>
+                </div>
+
+                <!-- Recent Activity Section -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Recent Activity</h5>
+                        <ul>
+                            <li>Booked Sports Court on 2025-10-25</li>
+                            <li>Canceled Lab B booking on 2025-10-20</li>
+                            <li>Profile updated on 2025-10-15</li>
+                        </ul>
+                        <a href="activity.html" class="btn btn-secondary">View All Activity</a>
+                    </div>
+                </div>
+
+                <!-- Resource Availability Section -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Resource Availability</h5>
+                        <p>Check the availability of resources for your upcoming bookings or to plan new ones. You can
+                            view real-time calendars and make reservations for study rooms, labs, and more!</p>
+                        <a href="resources.html" class="btn btn-info">View Available Resources</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Notifications Section (Optional) -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Notifications</h5>
+                        <ul>
+                            <li>Booking confirmation for Study Room A on 2025-11-01.</li>
+                            <li>Your booking for Lab B has been canceled successfully.</li>
+                        </ul>
+                        <!-- <a href="notifications.html" class="btn btn-success">View All Notifications</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mt-5">
+        <p>&copy; 2025 Concordia University. All rights reserved. | <a href="#">Privacy Policy</a></p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

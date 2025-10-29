@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Statistics</title>
+  <link rel="stylesheet" href="../css/dashboard/statistics.css">
+  <!-- Chart.js for the simple fake-data graph -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body class="stats">
+  <div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../admin/dashboard.html">My Dashboard</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="profile.html">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="resources.html">Resources</a>
+            </li>
+            <li class="nav-item">
+              <a href="request.html" class="nav-link">Requests</a>
+            </li>
+            <li class="nav-item">
+              <a href="statistics.html" class="nav-link">Reports</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Logout</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <main class="stats-main">
+
+    <!--Key Metrics Summary-->
+    <section class="metrics">
+      <div class="metric">Total Bookings: <strong>58</strong></div>
+      <div class="metric">Active Users: <strong>23</strong></div>
+      <div class="metric">Most Used: <strong>Study Room A</strong></div>
+      <div class="metric">Avg/Day: <strong>12</strong></div>
+    </section>
+
+    <section class="top-ressources">
+      <h2>Top Resources</h2>
+      <ul>
+        <li>Study Room A - 20 bookings</li>
+        <li>Lab B - 15 bookings</li>
+        <li>Sports Court - 8 bookings</li>
+      </ul>
+    </section>
+    <!--Fake data graph-->
+    <section class="chart-wrap">
+      <canvas id="usageChart" width="320" height="240" aria-label="Usage chart" role="img"></canvas>
+      <!--Circular Pie Chart-->
+      <canvas id="pieChart" width="320" height="240" aria-label="Pie Chart" role="img"></canvas>
+    </section>
+    <section class="peak-hours">
+      <h2>Peak Hours</h2>
+      <ul>
+        <li>10:00 - 12:00</li>
+        <li>14:00 - 16:00</li>
+        <li>18:00 - 20:00</li>
+      </ul>
+    </section>
+  </main>
+  <!-- Script to render the fake-data chart -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Bar chart
+      const ctx = document.getElementById('usageChart');
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Study A', 'Lab B', 'Court', 'Auditorium', 'Music Rm'],
+          datasets: [{ label: 'Bookings', data: [20, 15, 8, 12, 5] }]
+        },
+        options: {
+          responsive: false,
+          plugins: { legend: { display: true } },
+          scales: { y: { beginAtZero: true } }
+        }
+      });
+
+      // Pie chart
+      const pieCtx = document.getElementById('pieChart');
+      new Chart(pieCtx, {
+        type: 'pie',
+        data: {
+          labels: ['Engineering', 'Science', 'Business', 'Arts', 'Sports'],
+          datasets: [{
+            data: [25, 18, 12, 10, 7],
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.6)',
+              'rgba(54, 162, 235, 0.6)',
+              'rgba(255, 206, 86, 0.6)',
+              'rgba(75, 192, 192, 0.6)',
+              'rgba(153, 102, 255, 0.6)'
+            ]
+          }]
+        },
+        options: {
+          responsive: false,
+          plugins: {
+            legend: { position: 'right' },
+            title: { display: true, text: 'Bookings by Department' }
+          }
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>

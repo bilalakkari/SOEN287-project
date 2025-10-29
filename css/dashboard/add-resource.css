@@ -1,0 +1,97 @@
+        /* === ADMIN PAGES === */
+
+        /* Garde la même base que style.css, mais plus sobre et encadré */
+
+        :root {
+            /* Background image */
+            --bg-image: url("https://www.concordia.ca/content/concordia/en/about/history/_jcr_content/content-main/grid_container_45178103/grid-container-parsys/card_deck/card-deck-parsys/card_1108083642/adaptiveimage.img.620.medium.jpg/1712176459788.jpg");
+
+            /* Concordia-style palette */
+            --primary: #912338;
+            /* Burgundy */
+            --accent: #da3a16;
+            /* Orange accent */
+            --muted: #1b1f2a;
+            /* Deep neutral for surfaces */
+            --text: #ffffff;
+            /* Light text */
+            --text-d: #1c1c20;
+            /* Dark text */
+
+            --overlay: rgba(10, 12, 16, .55);
+            /* Overlay for readability */
+            --radius: 14px;
+            --shadow: 0 10px 30px rgba(0, 0, 0, .25);
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            color: var(--text);
+            background:
+                linear-gradient(var(--overlay), var(--overlay)),
+                var(--bg-image) center/cover fixed no-repeat;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+            font-family: 'Inter', system-ui, Arial, sans-serif;
+        }
+
+
+        /* Main form container */
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 70vh;
+        }
+
+        form {
+            background-color: white;
+            padding: 40px 50px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 420px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label {
+            font-weight: bold;
+            margin-top: 15px;
+            color: #2c2c34;
+        }
+
+        form input,
+        form select,
+        form textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        form textarea {
+            resize: none;
+            height: 80px;
+        }
+
+        form button {
+            background-color: #4cb5f5;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #379bdc;
+        }

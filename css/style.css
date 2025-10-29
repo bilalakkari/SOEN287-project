@@ -1,0 +1,100 @@
+/* General Styles */
+body,
+html {
+    height: 50%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Make the page content fill the height */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 75vh;
+}
+
+/* Main content should take available space */
+main {
+    flex: 1;
+    padding: 30px 15px;
+}
+
+/* Footer Styling - Always at the bottom */
+footer {
+    background-color: #f1f1f1;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+/* Other existing styles for Dashboard, Table, Button, etc. remain the same */
+.card {
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    color: #007bff;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    padding: 8px 0;
+}
+
+ul li:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+}
+
+/* Button styles */
+.btn-info,
+.btn-warning,
+.btn-secondary,
+.btn-success {
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .card {
+        margin-bottom: 15px;
+    }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    /* single clean border lines */
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid #000;
+    /* black border for all cells */
+    padding: 8px 12px;
+    text-align: left;
+}
+
+/* Header row */
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
